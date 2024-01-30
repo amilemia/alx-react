@@ -1,26 +1,24 @@
-import React from 'react';
-import App from './App';
 import { shallow } from 'enzyme';
+import App from './App';
 
-describe('App tests', () => {
-	it('renders without crashing', () => {
-		const component = shallow(<App />);
-
-		expect(component).toBeDefined();
+describe('<App />', () => {
+	it('App renders without crashing', () => {
+		const app = shallow(<App />);
+		expect(app.exists()).toBe(true);
 	});
-	it('should render a div with the class App-header', () => {
-		const component = shallow(<App />);
-
-		expect(component.find('.App-header')).toBeDefined();
+	it('App renders a div with the class App-header', () => {
+		const app = shallow(<App />);
+		const appHeader = app.find('div.App-header');
+		expect(appHeader.exists()).toBe(true);
 	});
-	it('should render a div with the class App-body', () => {
-		const component = shallow(<App />);
-
-		expect(component.find('.App-body')).toBeDefined();
+	it('App renders a div with the class App-body', () => {
+		const app = shallow(<App />);
+		const appBody = app.find('div.App-body');
+		expect(appBody.exists()).toBe(true);
 	});
-	it('should render a div with the class App-footer', () => {
-		const component = shallow(<App />);
-
-		expect(component.find('.App-footer')).toBeDefined();
+	it('App renders a div with the class App-footer', () => {
+		const app = shallow(<App />);
+		const appFooter = app.find('div.App-footer');
+		expect(appFooter.exists()).toBe(true);
 	});
 });

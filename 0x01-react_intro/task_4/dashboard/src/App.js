@@ -1,27 +1,21 @@
-import logo from './holberton-logo.jpg';
 import './App.css';
-import { getFullYear, getFooterCopy } from './utils';
+import logo from './logo.jpg';
+import { getFooterCopy, getFullYear } from './utils';
 
 function App() {
 	return (
 		<div className='App'>
 			<div className='App-header'>
-				<img src={logo} alt='Holberton' />
+				<img src={logo} alt='Holberton logo' />
 				<h1>School dashboard</h1>
 			</div>
 			<div className='App-body'>
 				<p>Login to access the full dashboard</p>
-				<section className='form-inputs'>
-					<section className='input'>
-						<label htmlFor='email'>Email:</label>
-						<input type='email' name='email' id='email' />
-					</section>
-					<section className='input'>
-						<label htmlFor='password'>Password: </label>
-						<input type='password' name='password' id='password' />
-					</section>
-					<button>OK</button>
-				</section>
+				<label htmlFor='email'>Email: </label>
+				<input name='email' id='email' type='text' />
+				<label htmlFor='password'>Password: </label>
+				<input name='password' id='password' type='password' />
+				<button>OK</button>
 			</div>
 			<div className='App-footer'>
 				<p>
